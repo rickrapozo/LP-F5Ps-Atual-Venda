@@ -24,10 +24,37 @@
     <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#0f172a">
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link rel="dns-prefetch" href="//cdn.utmify.com.br">
-    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    
+    <!-- Critical preconnects - PageSpeed optimization -->
+    <link rel="preconnect" href="https://api6.ipify.org" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.utmify.com.br">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    
+    <!-- DNS prefetch for non-critical resources -->
+    <link rel="dns-prefetch" href="//connect.facebook.net">
+    <link rel="dns-prefetch" href="//www.facebook.com">
+
+    <!-- Meta Pixel Code - Optimized loading -->
+    <script>
+    // Defer Facebook Pixel loading to improve LCP
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID_HERE');
+        fbq('track', 'PageView');
+      }, 1000);
+    });
+    </script>
+    <!-- End Meta Pixel Code -->
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -40,32 +67,141 @@
     <!-- UTMify Tracking -->
     <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
 
-    <!-- UTMify Pixel -->
-    <script>window.pixelId = "68a000dd95099f1dffad68c4";var a = document.createElement("script");a.setAttribute("async", "");a.setAttribute("defer", "");a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");document.head.appendChild(a);</script>
+    <!-- UTMify Pixel - Optimized loading -->
+    <script>
+    // Defer UTMify pixel loading to improve performance
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        window.pixelId = "688bcb0e39249d6f831e788f";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
+      }, 500);
+    });
+    </script>
 
-    <script>// ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIRconst link = 'espere.fator5ps.shop';function setBackRedirect(url) {let urlBackRedirect = url;urlBackRedirect = urlBackRedirect =urlBackRedirect.trim() +(urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +document.location.search.replace('?', '').toString();history.pushState({}, '', location.href);history.pushState({}, '', location.href);history.pushState({}, '', location.href);window.addEventListener('popstate', () => {console.log('onpopstate', urlBackRedirect);setTimeout(() => {location.href = urlBackRedirect;}, 1);});}setBackRedirect(link);</script>
+    <!-- Back Redirect Script - Optimized to prevent forced reflow -->
+    <script>
+    // Defer back redirect setup to avoid blocking initial render
+    window.addEventListener('DOMContentLoaded', function() {
+      const link = 'espere.fator5ps.shop';
+      function setBackRedirect(url) {
+        let urlBackRedirect = url;
+        urlBackRedirect = urlBackRedirect.trim() + 
+          (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') + 
+          document.location.search.replace('?', '').toString();
+        
+        // Use requestIdleCallback to avoid forced reflow
+        if (window.requestIdleCallback) {
+          requestIdleCallback(function() {
+            history.pushState({}, '', location.href);
+            history.pushState({}, '', location.href);
+            history.pushState({}, '', location.href);
+          });
+        } else {
+          setTimeout(function() {
+            history.pushState({}, '', location.href);
+            history.pushState({}, '', location.href);
+            history.pushState({}, '', location.href);
+          }, 0);
+        }
+        
+        window.addEventListener('popstate', function() {
+          console.log('onpopstate', urlBackRedirect);
+          setTimeout(function() {
+            location.href = urlBackRedirect;
+          }, 1);
+        });
+      }
+      setBackRedirect(link);
+    });
+    </script>
 
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.utmify.com.br">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <!-- Optimized font loading to reduce render blocking -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"></noscript>
     
-    <!-- Critical CSS for above-the-fold content -->
+    <!-- Resource hints for better caching -->
+    <link rel="prefetch" href="/assets/index-C98UbRho.js">
+    <link rel="prefetch" href="/assets/index-C1-7kK9J.css">
+    
+    <!-- Critical CSS for above-the-fold content - Optimized -->
     <style>
-      /* Critical styles for hero section */
-      .hero-section { min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-      .hero-title { font-size: 3rem; font-weight: bold; color: white; margin-bottom: 1.5rem; }
-      .hero-subtitle { font-size: 1.25rem; color: #fbbf24; font-style: italic; }
-      .hero-cta { background: linear-gradient(135deg, #92400e, #fbbf24); color: white; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 1rem; }
-      .hero-timer { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); border-radius: 1rem; padding: 1rem; margin-top: 1rem; }
-      .hero-visitor-count { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); border-radius: 0.5rem; padding: 0.5rem 1rem; margin-bottom: 2rem; }
+      /* Critical styles for hero section - Optimized for LCP */
+      .hero-section { 
+        min-height: 100vh; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        overflow: hidden;
+        will-change: transform; /* GPU acceleration */
+      }
+      .hero-title { 
+        font-size: 3rem; 
+        font-weight: bold; 
+        color: white; 
+        margin-bottom: 1.5rem;
+        font-display: swap; /* Improve font loading */
+      }
+      .hero-subtitle { 
+        font-size: 1.25rem; 
+        color: #fbbf24; 
+        font-style: italic;
+        font-display: swap;
+      }
+      .hero-cta { 
+        background: linear-gradient(135deg, #92400e, #fbbf24); 
+        color: white; 
+        padding: 1rem 2rem; 
+        border-radius: 0.5rem; 
+        font-weight: bold; 
+        text-decoration: none; 
+        display: inline-block; 
+        margin-top: 1rem;
+        transform: translateZ(0); /* Force GPU layer */
+      }
+      .hero-timer { 
+        background: rgba(255,255,255,0.1); 
+        backdrop-filter: blur(10px); 
+        border: 1px solid rgba(255,255,255,0.2); 
+        border-radius: 1rem; 
+        padding: 1rem; 
+        margin-top: 1rem;
+        contain: layout style paint; /* CSS containment */
+      }
+      .hero-visitor-count { 
+        background: rgba(255,255,255,0.1); 
+        backdrop-filter: blur(10px); 
+        border: 1px solid rgba(255,255,255,0.2); 
+        border-radius: 0.5rem; 
+        padding: 0.5rem 1rem; 
+        margin-bottom: 2rem;
+        contain: layout style paint;
+      }
       
-      /* Loading state */
-      .loading { opacity: 0; transition: opacity 0.3s ease-in; }
-      .loaded { opacity: 1; }
+      /* Loading state - Optimized */
+      .loading { 
+        opacity: 0; 
+        transition: opacity 0.3s ease-in;
+        visibility: hidden;
+      }
+      .loaded { 
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      /* Prevent layout shifts */
+      * {
+        box-sizing: border-box;
+      }
+      
+      /* Optimize font rendering */
+      body {
+        font-display: swap;
+        text-rendering: optimizeSpeed;
+      }
     </style>
   </head>
 
@@ -75,7 +211,35 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     
+    <!-- Meta Pixel noscript - Moved to body for HTML compliance -->
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"
+    /></noscript>
+    
     <div id="root"></div>
+    
+    <!-- Performance optimization script -->
+    <script>
+      // Optimize loading performance
+      window.addEventListener('load', function() {
+        // Mark page as loaded for CSS transitions
+        document.body.classList.add('loaded');
+        
+        // Prefetch critical resources after load
+        setTimeout(function() {
+          var link1 = document.createElement('link');
+          link1.rel = 'prefetch';
+          link1.href = 'https://connect.facebook.net/en_US/fbevents.js';
+          document.head.appendChild(link1);
+          
+          var link2 = document.createElement('link');
+          link2.rel = 'prefetch';
+          link2.href = 'https://cdn.utmify.com.br/scripts/pixel/pixel.js';
+          document.head.appendChild(link2);
+        }, 2000);
+      });
+    </script>
+    
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
