@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Brain, Heart, Zap, Rocket, Trophy, Clock, CheckCircle, Lock } from 'lucide-react';
-import productMockup from '@/assets/product-mockup.jpg';
+import productMockup from '../assets/product-mockup.jpg';
 
 const pillars = [
   {

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Timer, Users, Star } from 'lucide-react';
-import heroBackground from '@/assets/hero-bg.jpg';
+import heroBackground from '../assets/hero-bg.jpg';
 interface HeroSectionProps {
   onScrollToPricing: () => void;
 }
