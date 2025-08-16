@@ -122,7 +122,7 @@ const HeroSection = ({ onScrollToPricing }: HeroSectionProps) => {
         </div>
 
         {/* Timer da Contagem Regressiva */}
-        <div className="glass-card inline-flex items-center gap-4 px-6 py-4 animate-pulse-gold">
+        <div className="glass-card inline-flex items-center gap-4 px-6 py-4 animate-pulse-gold mb-20">
           <Timer className="w-6 h-6 text-accent" />
           <span className="text-white">Oferta expira em:</span>
           <div className="flex gap-2">
@@ -141,7 +141,7 @@ const HeroSection = ({ onScrollToPricing }: HeroSectionProps) => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float z-20">
           <div className="w-6 h-10 border-2 border-accent rounded-full flex justify-center mx-0 my-[32px]">
             <div className="w-1 h-3 bg-accent rounded-full mt-2 animate-pulse" />
           </div>
