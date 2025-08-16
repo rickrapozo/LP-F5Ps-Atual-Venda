@@ -20,7 +20,7 @@ const plans = [{
   features: ["TUDO do Plano Essencial +", "Bônus: MasterClass 'Neurociência das Emoções e Sentimentos ' (R$ 189)", "Bônus: Kit Biblioteca Premium '+ de 50 Títulos Para Seu Desenvolvimento PDFs' (R$ 139)", "Bônus: Acesso a 2 Cursos 'Analise Corporal e Neurociência da Lei da Atração'  (R$ 189)", "Bônus: Comunidade VIP Exclusiva (R$ 139/mês – 3 meses grátis)"],
   bonusValue: 569,
   totalSavings: 450.01,
-  cta: "ACELERAR MINHA TRANSFORMAÇÃO",
+  cta: "ACELERAR TRANSFORMAÇÃO",
   popular: true
 }];
 interface PricingSectionProps {
@@ -129,7 +129,7 @@ const PricingSection = ({ id, onEssentialPlanClick, onAcceleratorPlanClick }: Pr
                 {/* CTA Button */}
                 <Button 
                   size="lg" 
-                  className={`w-full ${plan.popular ? 'btn-hero animate-glow' : 'btn-luxury'}`}
+                  className={`w-full text-sm px-4 py-3 ${plan.popular ? 'btn-hero animate-glow' : 'btn-luxury'}`}
                   onClick={plan.popular ? onAcceleratorPlanClick : onEssentialPlanClick}
                 >
                   {plan.cta}

@@ -48,7 +48,7 @@ const HeroSection = ({ onScrollToPricing }: HeroSectionProps) => {
       clearInterval(visitorTimer);
     };
   }, []);
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-8" style={{
     backgroundImage: `linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--primary-light) / 0.8)), url(${heroBackground})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -64,9 +64,9 @@ const HeroSection = ({ onScrollToPricing }: HeroSectionProps) => {
       }} />)}
       </div>
 
-      <div className="container mx-auto px-6 text-center relative z-10">
+      <div className="container mx-auto px-6 text-center relative z-10 py-8">
         {/* Contador de Visitantes */}
-        <div className="glass-card inline-flex items-center gap-2 px-4 py-2 mb-8 animate-fade-in">
+        <div className="glass-card inline-flex items-center gap-2 px-4 py-2 mb-12 animate-fade-in">
           <Users className="w-4 h-4 text-accent" />
           <span className="text-white text-sm">
             <span className="text-gradient-gold font-semibold">{visitorCount}</span> pessoas visualizando esta página
@@ -74,28 +74,28 @@ const HeroSection = ({ onScrollToPricing }: HeroSectionProps) => {
         </div>
 
         {/* Título Principal com Efeito Typewriter */}
-        <h1 className="font-heading md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in text-3xl text-center">
+        <h1 className="font-heading md:text-6xl lg:text-7xl font-bold text-white mb-8 animate-fade-in text-3xl text-center">
           Pare de Lutar Contra
-          <span className="block text-gradient-gold animate-typewriter overflow-hidden whitespace-nowrap border-r-4 border-accent">
+          <span className="block text-gradient-gold animate-typewriter overflow-hidden whitespace-nowrap border-r-4 border-accent mt-2">
             Sua Própria Mente
           </span>
         </h1>
 
         {/* Subtítulo */}
-        <div className="mb-4 animate-slide-up">
+        <div className="mb-6 animate-slide-up">
           <p className="text-accent text-lg md:text-xl font-accent italic">
             Fator Essencial. Método 5Ps – A Descoberta da Mente Próspera
           </p>
         </div>
 
         {/* Título Secundário */}
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-semibold text-white mb-6 animate-slide-up">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-semibold text-white mb-8 animate-slide-up">
           Desbloqueie os 5 Pilares que Separam
           <span className="text-gradient-gold"> Sonhadores de Realizadores</span>
         </h2>
 
         {/* Prova Social */}
-        <div className="flex items-center justify-center gap-2 mb-8 animate-scale-in">
+        <div className="flex items-center justify-center gap-2 mb-10 animate-scale-in">
           <div className="flex">
             {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-accent text-accent" />)}
           </div>
@@ -105,10 +105,10 @@ const HeroSection = ({ onScrollToPricing }: HeroSectionProps) => {
         </div>
 
         {/* CTA Principal */}
-        <div className="mb-8 animate-scale-in">
+        <div className="mb-10 animate-scale-in">
           <Button 
             size="lg" 
-            className="btn-hero text-lg px-10 py-5 mb-4 animate-glow relative overflow-hidden group"
+            className="btn-hero text-lg px-10 py-5 mb-6 animate-glow relative overflow-hidden group"
             onClick={onScrollToPricing}
           >
             <span className="relative z-10">DESBLOQUEIE MINHA MENTE AGORA!</span>
