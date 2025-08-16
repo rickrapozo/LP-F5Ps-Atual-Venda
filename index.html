@@ -37,69 +37,10 @@
     })(window,document,'script','dataLayer','GTM-TZTDQRC8');</script>
     <!-- End Google Tag Manager -->
 
-    <!-- UTMify Tracking - Otimizado para não bloquear carregamento -->
-    <script
-      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-      data-utmify-prevent-xcod-sck
-      data-utmify-prevent-subids
-      async
-      defer
-      onload="console.log('UTMify carregado com sucesso')"
-      onerror="console.warn('Erro ao carregar UTMify')"
-    ></script>
+    <!-- UTMify Tracking -->
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
 
-    <!-- Back Redirect Script - Otimizado -->
-    <script>
-      // ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIR
-      const link = 'espere.fator5ps.shop';
-
-      function setBackRedirect(url) {
-        try {
-          let urlBackRedirect = url;
-          urlBackRedirect = urlBackRedirect.trim() + 
-            (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') + 
-            document.location.search.replace('?', '').toString();
-
-          // Adiciona entradas no histórico
-          history.pushState({}, '', location.href);
-          history.pushState({}, '', location.href);
-          history.pushState({}, '', location.href);
-
-          // Event listener para capturar tentativa de voltar
-          window.addEventListener('popstate', function(event) {
-            console.log('onpopstate', urlBackRedirect);
-            setTimeout(function() {
-              location.href = urlBackRedirect;
-            }, 1);
-          });
-        } catch (error) {
-          console.warn('Erro no back redirect:', error);
-        }
-      }
-
-      // Executa após DOM estar pronto
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', function() {
-          setBackRedirect(link);
-        });
-      } else {
-        setBackRedirect(link);
-      }
-    </script>
-
-    <!-- UTMify Initialization Check -->
-    <script>
-      // Verifica se UTMify carregou corretamente
-      window.addEventListener('load', function() {
-        setTimeout(function() {
-          if (typeof window.utmify !== 'undefined') {
-            console.log('✅ UTMify inicializado com sucesso');
-          } else {
-            console.warn('⚠️ UTMify não foi carregado - verificar conexão ou bloqueadores');
-          }
-        }, 2000);
-      });
-    </script>
+    <script>// ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIRconst link = 'espere.fator5ps.shop';function setBackRedirect(url) {let urlBackRedirect = url;urlBackRedirect = urlBackRedirect =urlBackRedirect.trim() +(urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +document.location.search.replace('?', '').toString();history.pushState({}, '', location.href);history.pushState({}, '', location.href);history.pushState({}, '', location.href);window.addEventListener('popstate', () => {console.log('onpopstate', urlBackRedirect);setTimeout(() => {location.href = urlBackRedirect;}, 1);});}setBackRedirect(link);</script>
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
