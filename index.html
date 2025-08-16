@@ -17,6 +17,15 @@
     <meta name="twitter:title" content="Método 5Ps - Transforme Sua Mente, Transforme Sua Vida" />
     <meta name="twitter:description" content="Pare de lutar contra sua mente. Comece a desbloquear sua prosperidade. 87% OFF apenas hoje!" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- Performance optimizations -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdn.utmify.com.br">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -65,7 +74,25 @@
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.utmify.com.br">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Critical CSS for above-the-fold content -->
+    <style>
+      /* Critical styles for hero section */
+      .hero-section { min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+      .hero-title { font-size: 3rem; font-weight: bold; color: white; margin-bottom: 1.5rem; }
+      .hero-subtitle { font-size: 1.25rem; color: #fbbf24; font-style: italic; }
+      .hero-cta { background: linear-gradient(135deg, #92400e, #fbbf24); color: white; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 1rem; }
+      .hero-timer { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); border-radius: 1rem; padding: 1rem; margin-top: 1rem; }
+      .hero-visitor-count { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); border-radius: 0.5rem; padding: 0.5rem 1rem; margin-bottom: 2rem; }
+      
+      /* Loading state */
+      .loading { opacity: 0; transition: opacity 0.3s ease-in; }
+      .loaded { opacity: 1; }
+    </style>
   </head>
 
   <body>

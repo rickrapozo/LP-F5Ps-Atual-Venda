@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Brain, Heart, Zap, Rocket, Trophy, Clock, CheckCircle, Lock } from 'lucide-react';
-import productMockup from '../assets/product-mockup.jpg';
+import productMockup from '../assets/optimized/product-mockup.webp';
 
 const pillars = [
   {
@@ -102,6 +102,8 @@ const ProductSection = ({ onScrollToPricing }: ProductSectionProps) => {
                     src={productMockup} 
                     alt="Livro Método 5Ps" 
                     className="w-64 h-64 mx-auto mb-6 object-contain animate-float rounded-2xl"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <h3 className="font-heading text-2xl font-bold text-primary mb-4">
                     Fator Essencial: Método 5Ps
