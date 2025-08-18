@@ -84,7 +84,7 @@ const HeroSection = ({ onScrollToPricing }: HeroSectionProps) => {
         {/* Subtítulo */}
         <div className="mb-6 animate-slide-up">
           <p className="text-accent text-lg md:text-xl font-accent italic">
-            Fator Essencial. Método 5Ps – A Descoberta da Mente Próspera
+            Fator Essencial. Método 5Ps – Reprogração Mental Prática
           </p>
         </div>
 
@@ -141,7 +141,7 @@ const HeroSection = ({ onScrollToPricing }: HeroSectionProps) => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float z-20">
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-float z-20">
           <div className="w-6 h-10 border-2 border-accent rounded-full flex justify-center mx-0 my-[32px]">
             <div className="w-1 h-3 bg-accent rounded-full mt-2 animate-pulse" />
           </div>
