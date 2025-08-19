@@ -47,18 +47,31 @@
     <!-- UTMify Tracking -->
     <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
 
-    <!-- UTMify Pixel - Optimized loading -->
+    <!-- UTMify Pixel - Mobile Optimized -->
     <script>
-    // Defer UTMify pixel loading to improve performance
+    // Ultra-optimized UTMify pixel loading for mobile performance
     window.addEventListener('load', function() {
-      setTimeout(function() {
-        window.pixelId = "688bcb0e39249d6f831e788f";
-        var a = document.createElement("script");
-        a.setAttribute("async", "");
-        a.setAttribute("defer", "");
-        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-        document.head.appendChild(a);
-      }, 500);
+      // Use requestIdleCallback for better mobile performance
+      if (window.requestIdleCallback) {
+        requestIdleCallback(function() {
+          window.pixelId = "68a000dd95099f1dffad68c4";
+          var a = document.createElement("script");
+          a.setAttribute("async", "");
+          a.setAttribute("defer", "");
+          a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+          document.head.appendChild(a);
+        });
+      } else {
+        // Fallback for older browsers with longer delay for mobile
+        setTimeout(function() {
+          window.pixelId = "68a000dd95099f1dffad68c4";
+          var a = document.createElement("script");
+          a.setAttribute("async", "");
+          a.setAttribute("defer", "");
+          a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+          document.head.appendChild(a);
+        }, 1000);
+      }
     });
     </script>
 
