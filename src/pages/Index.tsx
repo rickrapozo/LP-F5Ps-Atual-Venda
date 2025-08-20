@@ -5,6 +5,8 @@ import PainPointSection from '@/components/PainPointSection';
 import ProductSection from '@/components/ProductSection';
 import PricingSection from '@/components/PricingSection';
 import FinalUrgencySection from '@/components/FinalUrgencySection';
+import Footer from '@/components/Footer';
+import CookieConsent from '@/components/CookieConsent';
 
 // Função para scroll suave até a seção de preços
 const scrollToPricing = () => {
@@ -58,6 +60,8 @@ const Index = () => {
         onAcceleratorPlanClick={openAcceleratorPlan}
       />
       <FinalUrgencySection onScrollToPricing={scrollToPricing} />
+      <Footer />
+      <CookieConsent />
     </div>
   );
 };

@@ -116,11 +116,11 @@ const ProductSection = ({ onScrollToPricing }: ProductSectionProps) => {
                   <div className="space-y-3 text-left">
                     <div className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-accent" />
-                      <span>Framework Completo dos 5 Pilares</span>
+                      <span>Método de Reprogramação Mental 5 Pilares</span>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-accent" />
-                      <span>Guia de Aplicação Prática</span>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Aprenda a Alinhar Pensamento, Sentimento, Emoção, Ação, Resultado de Modo Prático e Objetivo no Seu Dia</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-accent" />

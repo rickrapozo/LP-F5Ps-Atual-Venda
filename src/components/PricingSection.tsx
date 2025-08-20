@@ -45,7 +45,7 @@ const PricingSection = ({ id, onEssentialPlanClick, onAcceleratorPlanClick }: Pr
             <span className="text-gradient-gold"> Mente Próspera</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Escolha o caminho que sente certo para sua jornada de transformação
+            Escolha o caminho que sente ser certo para sua jornada de transformação
           </p>
           
           {/* Banner de Urgência */}

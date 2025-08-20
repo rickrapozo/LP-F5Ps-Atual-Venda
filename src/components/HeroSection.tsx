@@ -100,7 +100,7 @@ const HeroSection = ({ onScrollToPricing }: HeroSectionProps) => {
             {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-accent text-accent" />)}
           </div>
           <span className="text-white">
-            Mais de <span className="text-accent font-bold">10.000</span> pessoas já transformaram suas vidas
+            Mais de <span className="text-accent font-bold">10.000</span> pessoas já Reprogramaram suas Mentes. Seja você o Próximo
           </span>
         </div>
 

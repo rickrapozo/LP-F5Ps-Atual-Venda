@@ -22,8 +22,12 @@
     
     <!-- Performance optimizations -->
     <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
     <meta name="theme-color" content="#0f172a">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
     <!-- Critical preconnects - PageSpeed optimization -->
     <link rel="preconnect" href="https://api6.ipify.org" crossorigin>
@@ -33,6 +37,12 @@
     <link rel="preconnect" href="https://www.googletagmanager.com">
     
     <!-- DNS prefetch for non-critical resources -->
+    <link rel="dns-prefetch" href="//connect.facebook.net">
+    <link rel="dns-prefetch" href="//www.facebook.com">
+    
+    <!-- Mobile-specific optimizations -->
+    <link rel="preload" href="/src/main.tsx" as="script" crossorigin>
+    <link rel="modulepreload" href="/src/main.tsx">
 
 
 
@@ -194,6 +204,29 @@
       body {
         font-display: swap;
         text-rendering: optimizeSpeed;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      /* Mobile-specific optimizations */
+      @media (max-width: 768px) {
+        .hero-title { font-size: 2.5rem; }
+        .hero-section { min-height: 100svh; }
+      }
+      
+      /* Reduce motion for better mobile performance */
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+      
+      /* Optimize scrolling on mobile */
+      html {
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
       }
     </style>
   </head>
@@ -209,19 +242,38 @@
     
     <!-- Performance optimization script -->
     <script>
-      // Optimize loading performance
+      // Mobile-first performance optimizations
       window.addEventListener('load', function() {
         // Mark page as loaded for CSS transitions
         document.body.classList.add('loaded');
         
-        // Prefetch critical resources after load
+        // Mobile-specific optimizations
+        if ('serviceWorker' in navigator && 'caches' in window) {
+          // Enable service worker for mobile caching (future enhancement)
+        }
+        
+        // Prefetch critical resources after load with mobile delay
+        var isMobile = window.innerWidth <= 768;
+        var delay = isMobile ? 3000 : 2000;
+        
         setTimeout(function() {
           var link = document.createElement('link');
           link.rel = 'prefetch';
           link.href = 'https://cdn.utmify.com.br/scripts/pixel/pixel.js';
           document.head.appendChild(link);
-        }, 2000);
+        }, delay);
+        
+        // Optimize images for mobile
+        if (isMobile && 'loading' in HTMLImageElement.prototype) {
+          var images = document.querySelectorAll('img[loading="lazy"]');
+          images.forEach(function(img) {
+            img.loading = 'lazy';
+          });
+        }
       });
+      
+      // Prevent zoom on input focus (mobile)
+      document.addEventListener('touchstart', function() {}, {passive: true});
     </script>
     
     <script type="module" src="/src/main.tsx"></script>
