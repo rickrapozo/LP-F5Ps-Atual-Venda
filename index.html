@@ -10,24 +10,65 @@
     <meta name="keywords" content="transformação mental, mentalidade de prosperidade, reprogramação mental, psicologia do sucesso, método 5Ps" />
     <meta name="author" content="Fator Essencial" />
 
+    <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Fator Essencial: Método 5Ps - A Descoberta da Mente Próspera" />
     <meta property="og:description" content="Junte-se a 10.000+ pessoas que transformaram suas vidas. Desbloqueie os 5 pilares que transformam pensamentos em resultados. A partir de R$ 9,99 - Oferta por tempo limitado!" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.fator5ps.shop" />
+    <meta property="og:site_name" content="Fator Essencial" />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Fator Essencial - Método 5Ps de Reprogramação Mental" />
+    <meta property="og:locale" content="pt_BR" />
+    
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Método 5Ps - Transforme Sua Mente, Transforme Sua Vida" />
     <meta name="twitter:description" content="Pare de lutar contra sua mente. Comece a desbloquear sua prosperidade. 87% OFF apenas hoje!" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:image:alt" content="Fator Essencial - Método 5Ps de Reprogramação Mental" />
+    
+    <!-- Additional Meta for Bots -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    <meta name="facebookbot" content="index, follow" />
+    <link rel="canonical" href="https://www.fator5ps.shop" />
     
     <!-- Performance optimizations -->
     <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#0f172a">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Structured Data for Bots -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Fator Essencial: Método 5Ps",
+      "description": "Sistema completo de reprogramação mental com 5 pilares para transformar pensamentos em resultados. Aprenda a alinhar Pensamento, Sentimento, Emoção, Ação e Resultado.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Fator Essencial"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "9.99",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2024-01-01",
+        "priceValidUntil": "2024-12-31"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "10000"
+      },
+      "image": "https://lovable.dev/opengraph-image-p98pqg.png",
+      "url": "https://www.fator5ps.shop"
+    }
+    </script>
     
     <!-- Critical preconnects - PageSpeed optimization -->
     <link rel="preconnect" href="https://api6.ipify.org" crossorigin>
@@ -39,10 +80,6 @@
     <!-- DNS prefetch for non-critical resources -->
     <link rel="dns-prefetch" href="//connect.facebook.net">
     <link rel="dns-prefetch" href="//www.facebook.com">
-    
-    <!-- Mobile-specific optimizations -->
-    <link rel="preload" href="/src/main.tsx" as="script" crossorigin>
-    <link rel="modulepreload" href="/src/main.tsx">
 
 
 
@@ -126,108 +163,21 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"></noscript>
     
-    <!-- Resource hints for better caching -->
-    <link rel="prefetch" href="/assets/index-C98UbRho.js">
-    <link rel="prefetch" href="/assets/index-C1-7kK9J.css">
+
     
-    <!-- Critical CSS for above-the-fold content - Optimized -->
+    <!-- Critical CSS for above-the-fold content -->
     <style>
-      /* Critical styles for hero section - Optimized for LCP */
-      .hero-section { 
-        min-height: 100vh; 
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
-        overflow: hidden;
-        will-change: transform; /* GPU acceleration */
-      }
-      .hero-title { 
-        font-size: 3rem; 
-        font-weight: bold; 
-        color: white; 
-        margin-bottom: 1.5rem;
-        font-display: swap; /* Improve font loading */
-      }
-      .hero-subtitle { 
-        font-size: 1.25rem; 
-        color: #fbbf24; 
-        font-style: italic;
-        font-display: swap;
-      }
-      .hero-cta { 
-        background: linear-gradient(135deg, #92400e, #fbbf24); 
-        color: white; 
-        padding: 1rem 2rem; 
-        border-radius: 0.5rem; 
-        font-weight: bold; 
-        text-decoration: none; 
-        display: inline-block; 
-        margin-top: 1rem;
-        transform: translateZ(0); /* Force GPU layer */
-      }
-      .hero-timer { 
-        background: rgba(255,255,255,0.1); 
-        backdrop-filter: blur(10px); 
-        border: 1px solid rgba(255,255,255,0.2); 
-        border-radius: 1rem; 
-        padding: 1rem; 
-        margin-top: 1rem;
-        contain: layout style paint; /* CSS containment */
-      }
-      .hero-visitor-count { 
-        background: rgba(255,255,255,0.1); 
-        backdrop-filter: blur(10px); 
-        border: 1px solid rgba(255,255,255,0.2); 
-        border-radius: 0.5rem; 
-        padding: 0.5rem 1rem; 
-        margin-bottom: 2rem;
-        contain: layout style paint;
-      }
+      /* Critical styles for hero section */
+      .hero-section { min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+      .hero-title { font-size: 3rem; font-weight: bold; color: white; margin-bottom: 1.5rem; }
+      .hero-subtitle { font-size: 1.25rem; color: #fbbf24; font-style: italic; }
+      .hero-cta { background: linear-gradient(135deg, #92400e, #fbbf24); color: white; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 1rem; }
+      .hero-timer { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); border-radius: 1rem; padding: 1rem; margin-top: 1rem; }
+      .hero-visitor-count { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); border-radius: 0.5rem; padding: 0.5rem 1rem; margin-bottom: 2rem; }
       
-      /* Loading state - Optimized */
-      .loading { 
-        opacity: 0; 
-        transition: opacity 0.3s ease-in;
-        visibility: hidden;
-      }
-      .loaded { 
-        opacity: 1;
-        visibility: visible;
-      }
-      
-      /* Prevent layout shifts */
-      * {
-        box-sizing: border-box;
-      }
-      
-      /* Optimize font rendering */
-      body {
-        font-display: swap;
-        text-rendering: optimizeSpeed;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-      
-      /* Mobile-specific optimizations */
-      @media (max-width: 768px) {
-        .hero-title { font-size: 2.5rem; }
-        .hero-section { min-height: 100svh; }
-      }
-      
-      /* Reduce motion for better mobile performance */
-      @media (prefers-reduced-motion: reduce) {
-        *, *::before, *::after {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
-      }
-      
-      /* Optimize scrolling on mobile */
-      html {
-        -webkit-overflow-scrolling: touch;
-        scroll-behavior: smooth;
-      }
+      /* Loading state */
+      .loading { opacity: 0; transition: opacity 0.3s ease-in; }
+      .loaded { opacity: 1; }
     </style>
   </head>
 
@@ -242,38 +192,19 @@
     
     <!-- Performance optimization script -->
     <script>
-      // Mobile-first performance optimizations
+      // Optimize loading performance
       window.addEventListener('load', function() {
         // Mark page as loaded for CSS transitions
         document.body.classList.add('loaded');
         
-        // Mobile-specific optimizations
-        if ('serviceWorker' in navigator && 'caches' in window) {
-          // Enable service worker for mobile caching (future enhancement)
-        }
-        
-        // Prefetch critical resources after load with mobile delay
-        var isMobile = window.innerWidth <= 768;
-        var delay = isMobile ? 3000 : 2000;
-        
+        // Prefetch critical resources after load
         setTimeout(function() {
           var link = document.createElement('link');
           link.rel = 'prefetch';
           link.href = 'https://cdn.utmify.com.br/scripts/pixel/pixel.js';
           document.head.appendChild(link);
-        }, delay);
-        
-        // Optimize images for mobile
-        if (isMobile && 'loading' in HTMLImageElement.prototype) {
-          var images = document.querySelectorAll('img[loading="lazy"]');
-          images.forEach(function(img) {
-            img.loading = 'lazy';
-          });
-        }
+        }, 2000);
       });
-      
-      // Prevent zoom on input focus (mobile)
-      document.addEventListener('touchstart', function() {}, {passive: true});
     </script>
     
     <script type="module" src="/src/main.tsx"></script>
